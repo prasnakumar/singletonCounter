@@ -26,19 +26,24 @@ namespace Singleton
                 return instance;
             }
         }
-        public void Decrement()
+        public int Decrement(int value)
         {
-            
-            Console.WriteLine("Action Decrement Count is " + --Count);
+
+            Count-=value;
+            return Count;
            
         }
-        public void Increment()
+        public int Increment(int value)
         {
-            
-            Console.WriteLine("Action Increment Count  is  " + ++Count);
-           
+           Count+=value;
+            return Count;
         }
-        
-        
+
+        public string  ToCurrency(int value)
+        {
+            return string.Concat('$',value);
+        }
+
+
     }
 }

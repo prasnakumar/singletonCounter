@@ -25,15 +25,40 @@ namespace Counter
                 //this can be changes to switch 
                 if ( select == "1")
                 {
-                    counter.Increment();
+                    Console.WriteLine("Enter the value ");
+                    var  Valuecheck= Console.ReadLine();
+                    try
+                    {
+                       int  Value = int.Parse(Valuecheck);
+                        int valuecounter = counter.Increment(Value);
+                        Console.WriteLine(counter.ToCurrency(valuecounter));
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+                   
                 }
                 else if (select == "2")
                 {
-                    counter.Decrement();
+                    Console.WriteLine("Enter the value ");
+                    var Valuecheck = Console.ReadLine();
+                    try
+                    {
+                        int Value = int.Parse(Valuecheck);
+                       int valuecounter= counter.Decrement(Value);
+                        Console.WriteLine(counter.ToCurrency(valuecounter));
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
                 }
                 else if (select == "3")
                 {
-                  Console.WriteLine("current counter "+Counter_singleton.instance.Count);
+                  Console.WriteLine("current counter $"+Counter_singleton.instance.Count);
                 }
                 else if (select == "0")
                 {
