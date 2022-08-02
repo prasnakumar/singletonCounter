@@ -6,7 +6,7 @@ namespace Singleton
     {
        public    int Count = 0;
         public static Counter_singleton instance = null;
-        public string Value { get; set; }
+  
 
 
         private Counter_singleton()
