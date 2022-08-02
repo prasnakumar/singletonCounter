@@ -1,6 +1,7 @@
 ﻿using Singleton;
 using System;
 
+
 namespace Counter
 {
     class Program
@@ -30,8 +31,8 @@ namespace Counter
                     try
                     {
                        int  Value = int.Parse(Valuecheck);
-                        int valuecounter = counter.Increment(Value);
-                        Console.WriteLine(counter.ToCurrency(valuecounter));
+                        string valuecounter = counter.Increment(Value);
+                        Console.WriteLine((valuecounter));
                     }
                     catch (Exception)
                     {
@@ -47,8 +48,8 @@ namespace Counter
                     try
                     {
                         int Value = int.Parse(Valuecheck);
-                       int valuecounter= counter.Decrement(Value);
-                        Console.WriteLine(counter.ToCurrency(valuecounter));
+                       string valuecounter= counter.Decrement(Value);
+                        Console.WriteLine(valuecounter);
                     }
                     catch (Exception)
                     {

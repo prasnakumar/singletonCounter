@@ -12,16 +12,16 @@ namespace CounterTest
 
         public Boolean Test1()
         {
-            int value = counter.Increment(3);
-            return value.Equals(3);
+            var value = counter.Increment(3);
+            return value.Equals("$3");
 
         }
         [Fact]
         public  void decrement()
         {
 
-            int value = counter.Decrement(8);
-            Assert.Equal(-5, value);// this is because only one instance is created 
+            var value = counter.Decrement(8);
+            Assert.Equal("$-5", value);// this is because only one instance is created 
         }
     }
 }

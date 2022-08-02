@@ -1,4 +1,5 @@
 ﻿using System;
+using ExtensionMethods;
 
 namespace Singleton
 {
@@ -26,24 +27,20 @@ namespace Singleton
                 return instance;
             }
         }
-        public int Decrement(int value)
+        public string Decrement(int value)
         {
 
             Count-=value;
-            return Count;
+            return Count.checkvalue();
            
         }
-        public int Increment(int value)
+        public string Increment(int value)
         {
            Count+=value;
-            return Count;
+            return Count.checkvalue();
         }
 
-        public string  ToCurrency(int value)
-        {
-            return string.Concat('$',value);
-        }
-
+     
 
     }
 }
