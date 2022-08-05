@@ -13,8 +13,7 @@ namespace ExtensionMethods
 
         public static string checkvalue(this int value)
         {
-
-            return string.Concat('$', value);
+     return string.Concat('$', value);
 
         }
     }
